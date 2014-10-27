@@ -93,7 +93,7 @@ module Ruboty
         when "groupchat"
           Xrc::Jid.new(message.from).resource
         else
-          client.users[message.from].name
+          client.users[message.from].mention_name
         end
       end
     end
