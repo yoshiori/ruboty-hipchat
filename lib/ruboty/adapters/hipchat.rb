@@ -89,12 +89,7 @@ module Ruboty
       end
 
       def username_of(message)
-        case message.type
-        when "groupchat"
-          Xrc::Jid.new(message.from).resource
-        else
-          client.users[message.from].mention_name
-        end
+        client.users[message.from].mention_name
       end
     end
   end
